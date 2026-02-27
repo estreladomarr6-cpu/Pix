@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Pagamento PIX</title>
+</head>
+<body style="text-align:center;font-family:Arial;padding:40px;">
+
+<h2>Pagamento via PIX</h2>
+
+<textarea id="pix" style="width:90%;height:120px;">
+00020101021226990014br.gov.bcb.pix2577pix.bpp.com.br/40557732/qrs2/v2/cobv/021mFJWT6iSAJVR4UDGkPFwhDCZhuxx1qgqzqJ4L5204000053039865802BR5924AXIONCODE SOLUTIONS LTDA6008Brasilia62070503***630434AE
+</textarea>
+
+<br><br>
+
+<button onclick="copiar()" style="padding:15px;font-size:18px;">
+COPIAR CÓDIGO PIX
+</button>
+
+<p id="msg"></p>
+
+<script>
+function copiar(){
+var texto=document.getElementById("pix");
+texto.select();
+navigator.clipboard.writeText(texto.value);
+document.getElementById("msg").innerHTML="Código copiado!";
+}
+</script>
+
+</body>
+</html>
